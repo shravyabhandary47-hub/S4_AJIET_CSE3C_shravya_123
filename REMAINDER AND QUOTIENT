@@ -1,0 +1,47 @@
+* FINDING REMAINDER AND QUOTIENT
+class Main {
+    public static void main(String[] args) {
+        int x;
+        int y;
+        int q;
+        int r;
+        x=20;
+        y=3;
+        q=x/y;
+        r=x%y;
+        System.out.println("q="+q);
+         System.out.println("r="+r);
+    }
+}
+
+
+* SWAPPING
+
+class Main{
+    public static void main(String[] args){
+        int power,ninja,bottle;
+        power=20;
+        ninja=30;
+        System.out.println("power="+power+" ninja="+ninja);
+        bottle=power;
+        power=ninja;
+        ninja=power;
+        System.out.println("power="+power+" ninja="+ninja);
+    }
+}
+
+* SWAPPING WITHOUT USING 3RD VARIABLE
+
+class Main{
+    public static void main(String[] args){
+        int x=5;
+        int y=10;
+        System.out.println("before swapping x="+x);
+        System.out.println("before swapping y="+y);
+        x=x^y;
+        y=x^y;
+        x=x^y;
+        System.out.println("after swapping x="+x);
+        System.out.println("after swapping y="+y);
+    }
+}
