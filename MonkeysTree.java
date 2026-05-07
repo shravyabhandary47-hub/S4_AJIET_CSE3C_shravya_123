@@ -1,43 +1,37 @@
 import java.util.Scanner;
 
-public class MonkeysTree {
+class Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter total monkeys: ");
-        int n = sc.nextInt();
+        int n, k, j, m, p;
 
-        System.out.print("Enter total bananas: ");
-        int m = sc.nextInt();
+        // Input
+        n = sc.nextInt();
+        k = sc.nextInt();
+        j = sc.nextInt();
+        m = sc.nextInt();
+        p = sc.nextInt();
 
-        System.out.print("Enter total peanuts: ");
-        int p = sc.nextInt();
+        // Monkeys eating bananas
+        int bananaMonkeys = m / k;
 
-        System.out.print("Enter bananas eaten by one monkey: ");
-        int k = sc.nextInt();
+        if (m % k != 0)
+            bananaMonkeys++;
 
-        System.out.print("Enter peanuts eaten by one monkey: ");
-        int j = sc.nextInt();
+        // Monkeys eating peanuts
+        int peanutMonkeys = p / j;
 
-        int monkeysEatingBanana = m / k;
-        if (m % k != 0) {
-            monkeysEatingBanana++;
-        }
+        if (p % j != 0)
+            peanutMonkeys++;
 
-        int monkeysEatingPeanut = p / j;
-        if (p % j != 0) {
-            monkeysEatingPeanut++;
-        }
+        // Total monkeys that came down
+        int total = bananaMonkeys + peanutMonkeys;
 
-        int totalMonkeysDown = monkeysEatingBanana + monkeysEatingPeanut;
+        // Monkeys left on tree
+        int left = n - total;
 
-        int monkeysLeft = n - totalMonkeysDown;
-
-        if (monkeysLeft < 0) {
-            monkeysLeft = 0;
-        }
-
-        System.out.println("Monkeys left on the tree = " + monkeysLeft);
+        System.out.println("Number of Monkeys left on the tree:" + left);
     }
 }
